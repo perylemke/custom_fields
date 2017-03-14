@@ -21,6 +21,27 @@
     <%= f.text_field :email %>
   </div>
 
+  <div class="field">
+    <% @fields.each do |field| %>
+        <% if field.field_type == "text" %>
+          <div class="field">
+            <%= field.field_name %><br />
+          </div>
+          <input name = <%= field.field_name %> type="text"/>
+        <% elsif field.field_type == "textarea" %>
+          <div class="field">
+            <%= field.field_name %>
+          </div>
+          <input name = <%= field.field_name %> type="textarea"/>
+        <% else %>
+          <div class="field">
+            <%= field.field_name %>
+          </div>
+          <input name = <%= field.field_name %> type="combobox"/>
+        <% end %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

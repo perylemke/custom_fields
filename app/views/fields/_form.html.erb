@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :field_type %>
-    <%= f.select :field_type, Field.field_types %>
+    <%= f.select :field_type, [['Texto', 'text'], ['Área de Texto', 'textarea'], ['Combo Box', 'combobox']] %>
   </div>
 
   <div class="actions">

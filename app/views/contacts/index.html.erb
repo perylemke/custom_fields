@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Contacts</h1>
+<h1>Lista de Contatos</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Nome</th>
       <th>Email</th>
       <th colspan="3"></th>
     </tr>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= contact.name %></td>
         <td><%= contact.email %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', contact %></td>
+        <td><%= link_to 'Editar', edit_contact_path(contact) %></td>
+        <td><%= link_to 'Exlcuir', contact, method: :delete, data: { confirm: 'Você está certo disso?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+<%= link_to 'Novo Contato', new_contact_path %>
