@@ -11,12 +11,12 @@ Is an Rails application that create a fields to a registry for a associated user
 Why? This is a challenge for [Resultados Digitais](http://resultadosdigitais.com.br/). Because I dreamed to this opportunity and I love this company.
 
 ### Stack
-- Ruby 2.3.1
-- Rails 5.0.2
-- PostgresSQL
-- Devise
-- RSpec
-- Heroku
+* Ruby 2.3.1
+* Rails 5.0.2
+* PostgresSQL
+* Devise
+* RSpec
+* Heroku
 
 ### Up and running: local!
 Repository clone:
@@ -26,12 +26,11 @@ cd custom_fields
 ```
 Run Rake to create and migrate the database
 ```bash
-rake db:create
-rake db:migrate
+rake db:create db:migrate
 ```
 Execute the server to run the application
 ```bash
-rails s
+bundle exec rails s
 ```
 ### Run in production
 
