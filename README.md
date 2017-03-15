@@ -8,7 +8,7 @@
 ### About the project
 Is an Rails application that create a fields to a registry for a associated user.
 
-Why? This is a challenge for [Resultados Digitais](http://resultadosdigitais.com.br/). Because I dreamed to this opportunity and I love this company.
+Why? This is a challenge for [Resultados Digitais](http://resultadosdigitais.com.br/). Because is a cool company, and I think it would be a good idea to be a part of it.
 
 ### Stack
 * Ruby 2.3.1
