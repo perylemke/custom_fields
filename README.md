@@ -2,8 +2,8 @@
 
 **Custom Fields - On development =)**
 ===================
-![ruby](https://img.shields.io/badge/Ruby-2.3.3-red.svg)
-![rails](https://img.shields.io/badge/Rails-5.0.1-red.svg)
+![ruby](https://img.shields.io/badge/Ruby-2.3.1-red.svg)
+![rails](https://img.shields.io/badge/Rails-5.0.2-red.svg)
 
 ### About the project
 Is an Rails application that create a fields to a registry for a associated user.
