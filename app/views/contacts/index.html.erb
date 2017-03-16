@@ -18,7 +18,7 @@
         <td><%= contact.email %></td>
         <td><%= link_to 'Exibir', contact %></td>
         <td><%= link_to 'Editar', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Exlcuir', contact, method: :delete, data: { confirm: 'Você está certo disso?' } %></td>
+        <td><%= link_to 'Excluir', contact, method: :delete, data: { confirm: 'Você está certo disso?' } %></td>
       </tr>
     <% end %>
   </tbody>
