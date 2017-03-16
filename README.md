@@ -34,6 +34,6 @@ bundle exec rails s
 ```
 ### Run in production
 
-WIP - Deploy to Heroku
+[Heroku](https://fathomless-shore-29362.herokuapp.com/)
 
 ### Thanks!
