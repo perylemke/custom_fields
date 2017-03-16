@@ -1,7 +1,8 @@
 class Contact < ApplicationRecord
   belongs_to :user
   has_many :fields
-
+  has_many :fields_contacts
+  
   validates_presence_of :name
   NAME_MIN_LENGTH = 3   #characters
   NAME_MAX_LENGTH = 50  #characters

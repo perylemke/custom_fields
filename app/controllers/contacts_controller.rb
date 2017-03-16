@@ -6,22 +6,28 @@ class ContactsController < ApplicationController
   end
 
   def show
+    @fields_contacts = @contact.fields_contacts
   end
 
   def new
     @contact = Contact.new
-    @fields = current_user.field
+    @fields = current_user.fields
   end
 
   def edit
+    @fields = current_user.fields
+    @fields_contacts = @contact.fields_contacts
   end
 
   def create
     @contact = Contact.new(contact_params)
     @contact.user = current_user
-
     respond_to do |format|
       if @contact.save
+        current_user.fields.each do |field|
+          FieldsContact.create(contact: @contact, field: field, value: params[field.field_name])
+        end
+
         format.html { redirect_to @contact, notice: 'Contato criado com sucesso!' }
         format.json { render :show, status: :created, location: @contact }
       else

@@ -2,7 +2,6 @@
   <% if contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
       <ul>
       <% contact.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,38 +9,34 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
-
   <div class="field">
     <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
-
   <div class="field">
     <% @fields.each do |field| %>
       <% if field.field_type == "text" %>
         <div class="field">
           <%= field.field_name %>
         </div>
-        <input name = <%= field.field_name %> type="text"/>
+        <input name = <%= field.field_name %> type="text" value="<%= (@fields_contacts and @fields_contacts.where(field: field).last)? @fields_contacts.where(field: field).last.value : "" %>"  />
       <% elsif field.field_type == "textarea" %>
         <div class="field">
           <%= field.field_name %>
         </div>
-        <input name = <%= field.field_name %> type="textarea"/>
+        <input name = <%= field.field_name %> type="textarea" value="<%= (@fields_contacts and @fields_contacts.where(field: field).last.value)? @fields_contacts.where(field: field).last.value : "" %>" />
       <% else %>
         <div class="field">
           <%= field.field_name %>
         </div>
-        <input name = <%= field.field_name %> type="combobox"/>
+        <input name = <%= field.field_name %> type="combobox" value="<%= (@fields_contacts and @fields_contacts.where(field: field).last.value)? @fields_contacts.where(field: field).last.value : "" %>" />
       <% end %>
     <% end %>
   </div>
-
   <div class="actions">
     <%= f.submit name = "Salvar"%>
   </div>

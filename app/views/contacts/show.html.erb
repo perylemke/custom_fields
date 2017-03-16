@@ -8,5 +8,29 @@
   <%= @contact.email %>
 </p>
 
+<p>
+  <% @fields_contacts.each do |field_contact| %>
+    <% if field_contact.field.field_type == "text" %>
+      <br/>
+      <p>
+        <strong><%= field_contact.field.field_name %></strong>
+        <%= field_contact.value %>
+      </p>
+      <% elsif field_contact.field.field_type == "textarea" %>
+      <br/>
+      <strong><%= field_contact.field.field_name %></strong>
+      <textarea readonly="true">
+        <%= field_contact.value %>
+      </textarea>
+      <% else %>
+      <br/>
+      <strong><%= field_contact.field.field_name %></strong>
+      <select readonly="true">
+        <%= field_contact.value %>
+      </select>
+    <% end %>
+  <% end %>
+</p>
+
 <%= link_to 'Editar', edit_contact_path(@contact) %> |
 <%= link_to 'Voltar', contacts_path %>

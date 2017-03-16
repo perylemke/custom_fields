@@ -2,7 +2,7 @@ class FieldsController < ApplicationController
   before_action :set_field, only: [:show, :edit, :update, :destroy]
 
   def index
-    @fields = current_user.field
+    @fields = current_user.fields
   end
 
   def show
