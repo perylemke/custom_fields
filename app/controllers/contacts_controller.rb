@@ -32,6 +32,7 @@ class ContactsController < ApplicationController
   end
 
   def update
+    @contact.user = current_user
     respond_to do |format|
       if @contact.update(contact_params)
         format.html { redirect_to @contact, notice: 'Contato atualizado com sucesso!' }
