@@ -1,6 +1,6 @@
 ![ResultadosDigitais](img/rd_horizontal_cor.png)
 
-**Custom Fields - On development =)**
+**Custom Fields**
 ===================
 ![ruby](https://img.shields.io/badge/Ruby-2.3.1-red.svg)
 ![rails](https://img.shields.io/badge/Rails-5.0.2-red.svg)
